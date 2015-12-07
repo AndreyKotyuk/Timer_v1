@@ -1,0 +1,18 @@
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.exe.config
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.exe
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.pdb
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.csprojResolveAssemblyReference.cache
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Properties.Resources.resources
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.csproj.GenerateResource.Cache
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.exe
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.pdb
+D:\Институт\2 семестр\Index\DM\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Timer.resources
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.exe.config
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.exe
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.pdb
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.exe
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.pdb
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.csprojResolveAssemblyReference.cache
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Timer.resources
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Properties.Resources.resources
+E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.csproj.GenerateResource.Cache
