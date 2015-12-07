@@ -12,6 +12,7 @@ namespace WayToTheFuture_TimerFuture
 {
     public partial class Timer : Form
     {
+        //проверка
         public Timer()
         {
             InitializeComponent();
