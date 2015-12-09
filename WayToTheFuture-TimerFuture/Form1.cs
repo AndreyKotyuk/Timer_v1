@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +12,17 @@ namespace WayToTheFuture_TimerFuture
 {
     public partial class Timer : Form
     {
-        //проверка
         public Timer()
         {
             InitializeComponent();
-      
+            //data.Rows[0].Cells[4].Value = Convert.ToString(Convert.ToInt32(textBox3.Text.Remove(textBox3.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox3.Text.Substring(textBox3.Text.IndexOf(":")));
         }
+
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //this.SetClientSizeCore(886, 251);
+            this.SetClientSizeCore(886, 251);
         }
        
         public int row = 0;
@@ -105,9 +106,25 @@ namespace WayToTheFuture_TimerFuture
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void button14_Click(object sender, EventArgs e)
         {
-
+            textBox3.Text = System.DateTime.Now.ToShortTimeString();
         }
+
+        public int box4 = 0;
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+         
+            if (box4 == 0)
+            {
+                box4++;
+                textBox4.Text = Convert.ToString(Convert.ToInt32(textBox3.Text.Remove(textBox3.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox3.Text.Substring(textBox3.Text.IndexOf(":")));
+            }
+            else
+            {
+                textBox4.Text = Convert.ToString(Convert.ToInt32(textBox4.Text.Remove(textBox4.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox4.Text.Substring(textBox4.Text.IndexOf(":")));
+            }
+            }
     }
 }
