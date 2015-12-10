@@ -12,10 +12,11 @@ namespace WayToTheFuture_TimerFuture
 {
     public partial class Timer : Form
     {
+        public int editrows = 0;
         public Timer()
         {
             InitializeComponent();
-            //data.Rows[0].Cells[4].Value = Convert.ToString(Convert.ToInt32(textBox3.Text.Remove(textBox3.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox3.Text.Substring(textBox3.Text.IndexOf(":")));
+            
         }
 
         
@@ -27,6 +28,8 @@ namespace WayToTheFuture_TimerFuture
        
         public int row = 0;
         public int value = 0;
+        public List<int> valarr = new List<int>() { };
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.SetClientSizeCore(886,343);
@@ -72,23 +75,34 @@ namespace WayToTheFuture_TimerFuture
             textBox4.Visible = false;
             textBox5.Visible = false;
             button1.Visible = true; //Прячем кнопки
+            box4 = 0;
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            data.Rows.Add(1);
-            data.Rows[row].HeaderCell.Value = row + 1;
-            data.Rows[row].Cells[0].Value = textBox1.Text;
-            data.Rows[row].Cells[1].Value = textBox2.Text;
-            data.Rows[row].Cells[2].Value = textBox3.Text;
-            data.Rows[row].Cells[3].Value = textBox4.Text;
-            try
+            if ((!(String.IsNullOrEmpty(textBox3.Text))) && (!(String.IsNullOrEmpty(textBox4.Text))) && (!(String.IsNullOrEmpty(textBox5.Text))))
             {
-                value = Convert.ToInt32(textBox5.Text);
+                data.Rows.Add(1);
+                data.Rows[row].HeaderCell.Value = row + 1;
+                data.Rows[row].Cells[0].Value = textBox1.Text;
+                data.Rows[row].Cells[1].Value = textBox2.Text;
+                data.Rows[row].Cells[2].Value = textBox3.Text;
+                data.Rows[row].Cells[3].Value = textBox4.Text;
+                try
+                {
+                    value = Convert.ToInt32(textBox5.Text);
+                    valarr.Add(value);
+                }
+                catch { };
+                row++;
+
+
+                editrows++;
+                timer1.Enabled = true;
+                box4 = 0;
+
+                Cl();
             }
-            catch { };
-            row++;
-            Cl();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -106,8 +120,10 @@ namespace WayToTheFuture_TimerFuture
 
         }
 
+        
         private void button14_Click(object sender, EventArgs e)
         {
+
             textBox3.Text = System.DateTime.Now.ToShortTimeString();
         }
 
@@ -115,16 +131,54 @@ namespace WayToTheFuture_TimerFuture
 
         private void button10_Click(object sender, EventArgs e)
         {
-         
-            if (box4 == 0)
+            if (!(String.IsNullOrWhiteSpace(textBox3.Text)))
             {
-                box4++;
-                textBox4.Text = Convert.ToString(Convert.ToInt32(textBox3.Text.Remove(textBox3.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox3.Text.Substring(textBox3.Text.IndexOf(":")));
+                if (box4 == 0)
+                {
+                    box4++;
+                    textBox4.Text = Convert.ToString(Convert.ToInt32(textBox3.Text.Remove(textBox3.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox3.Text.Substring(textBox3.Text.IndexOf(":")));
+                }
+                else
+                {
+                    textBox4.Text = Convert.ToString(Convert.ToInt32(textBox4.Text.Remove(textBox4.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox4.Text.Substring(textBox4.Text.IndexOf(":")));
+                }
             }
-            else
+        }
+
+        public void Time(int rw)
+        {
+            data.Rows[rw].Cells[4].Value = Convert.ToInt32(data.Rows[rw].Cells[3].Value.ToString().Substring(0, data.Rows[rw].Cells[3].Value.ToString().IndexOf(":"))) * 60 + Convert.ToInt32(data.Rows[rw].Cells[3].Value.ToString().Substring(data.Rows[rw].Cells[3].Value.ToString().IndexOf(":") + 1)) - (Convert.ToInt32(data.Rows[rw].Cells[2].Value.ToString().Substring(0, System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":"))) * 60 + Convert.ToInt32(System.DateTime.Now.ToShortTimeString().ToString().Substring(System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":") + 1)));
+            data.Rows[rw].Cells[5].Value = Convert.ToInt32(System.DateTime.Now.ToShortTimeString().ToString().Substring(0, System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":"))) * 60 + Convert.ToInt32(System.DateTime.Now.ToShortTimeString().ToString().Substring(System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":") + 1)) - (Convert.ToInt32(data.Rows[rw].Cells[2].Value.ToString().Substring(0, data.Rows[rw].Cells[2].Value.ToString().IndexOf(":"))) * 60 + Convert.ToInt32(data.Rows[rw].Cells[2].Value.ToString().Substring(data.Rows[rw].Cells[2].Value.ToString().IndexOf(":") + 1)));
+            data.Rows[rw].Cells[6].Value = Convert.ToInt32(data.Rows[rw].Cells[5].Value) * valarr[rw]; ;
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < editrows; i++)
             {
-                textBox4.Text = Convert.ToString(Convert.ToInt32(textBox4.Text.Remove(textBox4.Text.IndexOf(":"))) + 1) + Convert.ToString(textBox4.Text.Substring(textBox4.Text.IndexOf(":")));
+                Time(i);
+                //data.Rows[0].Cells[4].Value = Convert.ToInt32(data.Rows[0].Cells[3].Value.ToString().Substring(0, data.Rows[0].Cells[3].Value.ToString().IndexOf(":"))) * 60 + Convert.ToInt32(data.Rows[0].Cells[3].Value.ToString().Substring(data.Rows[0].Cells[3].Value.ToString().IndexOf(":") + 1)) - (Convert.ToInt32(data.Rows[0].Cells[2].Value.ToString().Substring(0, System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":"))) * 60 + Convert.ToInt32(System.DateTime.Now.ToShortTimeString().ToString().Substring(System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":") + 1)));
+                //data.Rows[0].Cells[5].Value = Convert.ToInt32(data.Rows[0].Cells[2].Value.ToString().Substring(0, System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":"))) * 60 + Convert.ToInt32(System.DateTime.Now.ToShortTimeString().ToString().Substring(System.DateTime.Now.ToShortTimeString().ToString().IndexOf(":") + 1)) - (Convert.ToInt32(data.Rows[0].Cells[2].Value.ToString().Substring(0, data.Rows[0].Cells[2].Value.ToString().IndexOf(":"))) * 60 + Convert.ToInt32(data.Rows[0].Cells[2].Value.ToString().Substring(data.Rows[0].Cells[2].Value.ToString().IndexOf(":") + 1)));
+                //data.Rows[0].Cells[6].Value = Convert.ToInt32(data.Rows[0].Cells[5].Value) * value;
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (row != 0)
+            {
+                textBox5.Text = Convert.ToString(value);
             }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Cl();
+        }
     }
 }
