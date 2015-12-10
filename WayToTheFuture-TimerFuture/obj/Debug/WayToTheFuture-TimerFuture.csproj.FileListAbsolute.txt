@@ -16,3 +16,12 @@ E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFutur
 E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Timer.resources
 E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Properties.Resources.resources
 E:\2 курс учеба\pppi\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.csproj.GenerateResource.Cache
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.exe.config
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.exe
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.pdb
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.exe
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\bin\Debug\WayToTheFuture-TimerFuture.pdb
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.csprojResolveAssemblyReference.cache
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Timer.resources
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture_TimerFuture.Properties.Resources.resources
+C:\Users\Андрей\Downloads\WayToTheFuture-TimerFuture (4)\Timer_v1\WayToTheFuture-TimerFuture\obj\Debug\WayToTheFuture-TimerFuture.csproj.GenerateResource.Cache
